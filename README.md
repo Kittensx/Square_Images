@@ -1,7 +1,6 @@
 # 📦 Square Image Processor (Alpha)
 
-A configurable, folder-based image resizing tool for generating square image variants with color padding. Designed for simplicity, flexibility, and future extensibility.
-
+#### Square Images is a Python-based image processing tool for batch resizing and padding images into multiple square formats. It uses YAML-based configuration, supports CSS color names and custom color maps, and outputs to structured folders. Ideal for preparing assets for models, datasets, or media workflows. Alpha-stage features include multithreading, optional pause flags, and experimental whitespace removal.
 ---
 
 ## ✅ Current Features (Alpha)
