@@ -1,0 +1,1 @@
+if the image is already perfectly square, there will be no framing/colors added.
