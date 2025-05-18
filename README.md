@@ -1,1 +1,145 @@
-# Square_Images
+# 📦 Square Image Processor (Alpha)
+
+A configurable, folder-based image resizing tool for generating square image variants with color padding. Designed for simplicity, flexibility, and future extensibility.
+
+---
+
+## ✅ Current Features (Alpha)
+
+- Resize input images to multiple square dimensions (`resize_sizes`)
+- Apply padding using named colors, hex values, or custom RGB mappings
+- Skip already-processed images (`skip_processed_images`)
+- Multi-core processing with optional worker control
+- Progress bar with per-image feedback
+- Configurable cleanup options (`remove_empty_folders`)
+- Optional keyboard pause/resume (experimental)
+
+---
+
+## ⚙️ Configuration (`config.yaml`)
+
+Only tested and stable options are exposed in this file. For additional functionality (e.g. whitespace removal or advanced thresholds), edit the code directly.
+
+### 🗂 Paths
+```yaml
+input_folders:
+  - ./data/input
+output_folder: ./data/processed
+originals_folder: ./data/originals
+padding_folder: ./data/padding_added_archive
+named_color_file: "./config/colors.txt"
+```
+#### Tips for YAML formatting:
+
+Use ./folder_name to refer to paths relative to the project root
+
+Use quotes ("" or '') when:
+
+Paths contain special characters
+
+You're referencing color codes like #ffffff
+
+Use consistent slashes (/) even on Windows
+
+Avoid trailing slashes in folder names
+
+#### 🖼 Resizing & Padding
+
+resize_sizes: [768, 1024, 320, 640, 1280]
+padding_color: "#ffffff"  # white padding
+You can specify the padding color in one of the following ways:
+
+#### ✅ Standard CSS names
+white, black, red, lightblue, gray, etc.
+
+#### ✅ Hex values
+Use quotes for YAML compatibility:
+
+"#00abcf"    # blue-cyan
+"#fff"       # shorthand for white
+
+#### ✅ Comma-separated RGB
+
+```yaml
+"255,255,255"  # white
+"204,51,255"   # purple-ish
+
+```
+
+#### ✅ Custom named colors
+Define your own names in a separate text file (e.g., colors.txt):
+```txt
+soft_gold: 218,165,32
+cool_silver: 192,192,192
+```
+
+And reference them by name in your config:
+
+```yaml
+padding_color: soft_gold
+```
+
+---
+
+## ⚙️ Behavior Toggles
+```yaml
+enable_pause_resume: false  # Currently disabled in alpha
+enable_queue: false         # Placeholder for future support
+remove_empty_folders: true  # Clean up folders after processing
+```
+---
+
+### ⚠️ Known Limitations
+enable_pause_resume prints pause/resume prompts but does not pause mid-processing reliably.
+
+copy_bin was deprecated due to inconsistent behavior and is no longer included in the config.
+
+gray_threshold and whitespace_sizes are available internally but not exposed in this release.
+
+---
+
+#### ▶️ Running the Tool
+To run:
+
+```bash
+python image_square_processor.py
+```
+
+This will:
+
+Look inside all input_folders
+
+Process all supported image formats (.jpg, .png, .jpeg, .tiff, .nef)
+
+Output resized/padded results to folders like:
+
+```bash
+
+./data/processed/img_512/
+./data/processed/img_768/
+
+...
+📁 Suggested Project Structure
+your_project/
+├── config/
+│   ├── config.yaml
+│   └── colors.txt
+├── data/
+│   ├── input/
+│   ├── originals/
+│   ├── processed/
+│   └── padding_added_archive/
+├── logs/
+├── modules/
+│   └── [*.py files]
+└── image_square_processor.py
+```
+---
+
+## 🧪 Development Notes
+This is an alpha-stage tool. Some parts (like whitespace removal and pause manager) are intentionally restricted until they're stabilized. If you're comfortable editing Python, you can enable or tweak hidden features directly.
+
+---
+
+## 🧑‍💻 License
+MIT-style license for personal or internal use. Use at your own risk. If it eats your cat pictures, we're not liable.
