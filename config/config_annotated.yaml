@@ -1,0 +1,25 @@
+# === Input & Output Paths ===
+input_folders:
+  - ./data/input
+output_folder: ./data/processed
+originals_folder: ./data/originals
+padding_folder: ./data/padding_added_archive
+named_color_file: "./config/colors.txt"  # Custom named colors in RGB format
+
+# === Image Resize Settings ===
+resize_sizes: [768, 1024, 320, 640, 1280]  # Output sizes for padded images
+padding_color: white  # Use standard CSS color name or a named color from the file
+
+# === Runtime Behavior ===
+enable_pause_resume: false     # Disabled in alpha; pause/resume with P/R does not work
+enable_queue: false            # Placeholder for future queue-based processing
+
+# === Input Cleanup Options ===
+copy_bin: true                 # Copy images before processing
+delete_bin: false             # Delete original images after processing
+remove_empty_folders: true    # Clean up folders with no files after processing
+
+# === Performance Options ===
+max_workers: null             # Auto-detect based on CPU/memory
+batch_size: 10
+progress_bar: true

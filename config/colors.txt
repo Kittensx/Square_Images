@@ -1,0 +1,6 @@
+maroon_purple: 125,0,74
+soft_gold: 218,165,32
+deep_sky_blue: 0,191,255
+warm_gray: 112,128,144
+lime_zest: 191,255,0
+cool_silver: 192,192,192

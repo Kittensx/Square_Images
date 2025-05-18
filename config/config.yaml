@@ -1,0 +1,24 @@
+# config.yaml
+
+input_folders:
+  - ./test_folder
+output_folder: ./data/processed
+originals_folder: ./data/originals
+padding_folder: ./data/padding_added_archive
+named_color_file: "./config/colors.txt"
+
+resize_sizes: [512, 768, 1024]
+
+padding_color: white
+
+enable_pause_resume: false #currently does not work 
+enable_queue: false
+
+delete_bin: false
+remove_empty_folders: true
+
+max_workers: null  # Use null to fallback to auto
+batch_size: 10
+progress_bar: true
+
+
