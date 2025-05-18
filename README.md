@@ -15,6 +15,16 @@
 
 ---
 
+## How to clone this directory & Install
+```bash
+git clone https://github.com/Kittensx/Square_Images/
+```
+### Navigate to installed directory
+```bash
+pip install -r requirements.txt
+```
+---
+
 ## ⚙️ Configuration (`config.yaml`)
 
 Only tested and stable options are exposed in this file. For additional functionality (e.g. whitespace removal or advanced thresholds), edit the code directly.
@@ -104,13 +114,6 @@ gray_threshold and whitespace_sizes are available internally but not exposed in 
 When running the program multiple times in a row using the same settings, it will overwrite existing files with the new color. If you want to keep all of the pictures, you will want to move them from the output folder before running the program again. In a future update I may add a feature to move finished files automatically. Until then, move them manually.
 
 ---
-#### Install
-
-```bash
-pip install -r requirements.txt
-```
----
-
 #### ▶️ Running the Tool
 To run:
 
