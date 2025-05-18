@@ -1,6 +1,6 @@
 # === Input & Output Paths ===
 input_folders:
-  - ./data/input
+  - ./data/input 
 output_folder: ./data/processed
 originals_folder: ./data/originals
 padding_folder: ./data/padding_added_archive
@@ -8,7 +8,7 @@ named_color_file: "./config/colors.txt"  # Custom named colors in RGB format
 
 # === Image Resize Settings ===
 resize_sizes: [768, 1024, 320, 640, 1280]  # Output sizes for padded images
-padding_color: white  # Use standard CSS color name or a named color from the file
+padding_color: white  # Use standard CSS color name or a named color from the file, or hex format '#000fff' . If you use hex format ensure that the number sign and the 6 symbols are enclosed in single quotes: '', or it will not  work. 
 
 # === Runtime Behavior ===
 enable_pause_resume: false     # Disabled in alpha; pause/resume with P/R does not work
