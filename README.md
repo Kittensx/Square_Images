@@ -143,5 +143,10 @@ This is an alpha-stage tool. Some parts (like whitespace removal and pause manag
 
 ---
 
+## Test Pictures
+I've added test pictures in the .data/processed folder with sample images that have been used when the program ran. In the img_1280 folder I showed a few different colors. I just typed randomly for the green and the purple colors (random hex). Ensure that if you do use hex, you enclose them in single quotation marks, otherwise the "#" sign will make what you type after it as a comment. "#05bc13f" example. For color names that are two words or more - use a hex. This version does not currently support colors longer than one word. Sorry :*(. 
+
+I've also included a test image that shows the program when it runs. Even when creating multiple sizes it still runs very fast.
+
 ## 🧑‍💻 License
 MIT-style license for personal or internal use. Use at your own risk. If it eats your cat pictures, we're not liable.
