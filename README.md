@@ -31,6 +31,12 @@ named_color_file: "./config/colors.txt"
 ```
 #### Tips for YAML formatting:
 
+##### Windows Path Tips
+Use single quotes ('C:\path') or forward slashes ("C:/path") to avoid escape issues in YAML.
+Avoid raw double-quoted Windows paths unless you double the backslashes ("C:\\\path").
+
+---
+
 Use ./folder_name to refer to paths relative to the project root
 
 Use quotes ("" or '') when:
